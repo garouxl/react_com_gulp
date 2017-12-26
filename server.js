@@ -8,6 +8,9 @@ app.use(express.static(path.join(__dirname, 'dist')));// para ler o caminho dos 
 app.get("/",function(req,res){
     res.sendFile(__dirname + "/index.html");
 });
+app.get("/data",function(req,res){
+    res.sendFile(__dirname + "/data.js");
+});
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`)
